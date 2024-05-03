@@ -19,9 +19,27 @@ body {
 	padding: 0 20px;
 }
 
+.main {
+	margin-bottom: 90px;
+}
+
 a {
 	text-decoration: none;
 	cursor: pointer;
+}
+
+input {
+	border: none;
+}
+
+input:focus {
+	outline: unset;
+}
+
+::placeholder {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 .button {
@@ -119,19 +137,8 @@ a {
 	margin: 16px 0 32px 0;
 
 	input {
-		border: none;
 		width: 307px;
 	}
-
-	input:focus {
-		outline: unset;
-	}
-
-	::placeholder {
-		font-size: 0.75rem;
-		font-weight: 400;
-		line-height: 20px;
-  }
 }
 
 .cards {
@@ -205,4 +212,275 @@ a {
 }
 
 
+// Spa
 
+.header {
+	&__inner {
+		display: flex;
+		align-items: center;
+		margin: 30px 0;
+	}
+
+	&__back-button {
+		width: 20px;
+		height: 20px;
+    margin-right: auto;
+		img {
+			width: 100%;
+		}
+	}
+
+	.search-input {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 305px;
+		padding: 12px 14px;
+		background-color: #fff;
+		border-radius: 30px;
+	}
+
+	.search-input input {
+		width: 249px;
+	}
+}
+
+.spa-cards {
+
+	&__item {
+		width: 335px;
+	}	
+
+	&__item::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: #E7E7E7;
+		margin: 14px 0;
+	}
+
+	&__item-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	&__item-image {
+		width: 115px;
+		height: 120px;
+		border-radius: 16px;
+	}
+
+	&__item-image img {
+		height: 100%;
+		width: 100%;
+	  object-fit: fill;
+	}
+
+	.card-info {
+    width: 210px;
+
+		&__title-block {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__title-block h3 {
+			font-size: 0.875rem;
+			font-weight: 600;
+			line-height: 16px;
+		}
+	}
+
+	p {
+		color: #7F808A;
+		line-height: 16px;
+	}
+
+	.spa-time {
+		font-size: 0.625rem;
+		font-weight: 700;
+	}
+
+	.spa-text {
+		font-size: 0.75rem;
+		font-weight: 600;
+		margin: 8px 0;
+	}
+
+	.order-button {
+		width: 210px;
+	}
+
+	.order-button a {
+		color: #ffffff;
+		font-size: 0.75rem;
+		font-weight: 600;
+		line-height: 16px;
+	}
+}
+
+
+
+//appointment page
+
+.appontment-header-inner h2 {
+	width: 305px;
+	text-align: center;
+}
+
+.calendar {
+	margin-bottom: 30px;
+}
+
+.calendar-day-caption {
+	width: 160px;
+	margin: 0 auto;
+	display: flex;
+
+}
+
+.prev-button, .next-button{
+	border: none;
+	background-color: transparent;
+}
+
+.date {
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+.date-table {
+	border-spacing: 10px;
+
+	td {
+		text-align: center;
+		vertical-align: middle;
+		color: #672EE0;
+		padding: 13px 0px;
+		width: 54px;
+		background-color: #ffffff;
+		border-radius: 10px;
+		// margin-left: 13.75px;
+	}
+
+	th {
+		color: #672EE0;
+	}
+}
+
+.time-block {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 21px 15px;
+	margin-bottom: 160px;
+}
+
+.order-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		font-size: 1.063rem;
+		font-weight: 700;
+		line-height: 22px;
+	}
+
+	p {
+		font-size: 0.938rem;
+		font-weight: 700;
+		line-height: 20px;
+	}
+}
+
+.time-block .date {
+	margin: 9px 0 15px 0;
+}
+
+.time-block	ul {
+	padding-left: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+	margin-bottom: 23px;
+}
+
+.time-block ul>li {
+	padding: 5px;
+	border: 1px solid #672EE0;
+	border-radius: 5px;
+	color: #672EE0;
+}
+
+.duration-time {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 122px;
+}
+
+.duration-time p {
+	font-size: 0.765rem;
+}
+
+.big-order-button {
+	width: 330px;
+	margin-bottom: 20px;
+
+	a {
+		color: #fff;
+	}
+}
+
+
+//appointment approve
+
+.appointment-approve {
+	margin-top: 230px;
+	text-align: center;
+
+	&__image {
+		width: 120px;
+		height: 120px;
+		border-radius: 80px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	&__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+		h3 {
+			font-size: 1.25rem;
+			font-weight: 700;
+			margin: 24px 0 21px 0;
+		}
+
+		.appointment-date-time {
+			font-weight: 700;
+		}
+
+	.appointment-title {
+		font-weight: 700;
+		color: #7F808A;
+		margin: 8px 0 202px 0;
+	}
+}
+
+.continue-button {
+	width: 330px;
+	display: block;
+	margin: 0 auto 20px auto;
+
+	a {
+		color: #fff;
+	}
+}
